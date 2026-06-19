@@ -1,26 +1,67 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-space-grotesk);
+
+  /* Cyber Theme Colors */
+  --color-cyber-bg: #050505;
+  --color-cyber-primary: #ff4500;
+  --color-cyber-secondary: #39ff14;
+  --color-cyber-text: #e0e0e0;
+  --color-cyber-muted: #555555;
+  --color-cyber-accent: #ff4500;
+  
+  /* SDE Theme Colors */
+  --color-sde-bg: #0f172a;
+  --color-sde-primary: #3b82f6;
+  --color-sde-secondary: #a855f7;
+  --color-sde-text: #f8fafc;
+  --color-sde-muted: #64748b;
+  --color-sde-accent: #a855f7;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  /* Default to Cyber */
+  --background: var(--color-cyber-bg);
+  --foreground: var(--color-cyber-text);
+  --primary: var(--color-cyber-primary);
+  --secondary: var(--color-cyber-secondary);
+  --muted: var(--color-cyber-muted);
+  --accent: var(--color-cyber-accent);
+}
+
+:root[data-identity="cyber"] {
+  --background: var(--color-cyber-bg);
+  --foreground: var(--color-cyber-text);
+  --primary: var(--color-cyber-primary);
+  --secondary: var(--color-cyber-secondary);
+  --muted: var(--color-cyber-muted);
+  --accent: var(--color-cyber-accent);
+}
+
+:root[data-identity="sde"] {
+  --background: var(--color-sde-bg);
+  --foreground: var(--color-sde-text);
+  --primary: var(--color-sde-primary);
+  --secondary: var(--color-sde-secondary);
+  --muted: var(--color-sde-muted);
+  --accent: var(--color-sde-accent);
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+  transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out;
+  overflow-x: clip;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), sans-serif;
+}
+
+@utility text-stroke-primary {
+  -webkit-text-stroke: 1px var(--primary);
+  color: transparent;
 }
