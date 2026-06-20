@@ -15,7 +15,7 @@ export const cyberContent = {
     phone: '+91 9346096782',
     links: {
       github: 'https://github.com/VIGHNESH329',
-      linkedin: 'https://www.linkedin.com/in/deepak-sai-vighnesh-panidam-91b35928a/',
+      linkedin: 'https://www.linkedin.com/in/deepak-sai-vighnesh/',
       tryhackme: 'https://tryhackme.com/p/Deepaksaivighnesh'
     }
   },
@@ -123,7 +123,7 @@ export const sdeContent = {
     phone: '+91 9346096782',
     links: {
       github: 'https://github.com/VIGHNESH329',
-      linkedin: 'https://www.linkedin.com/in/deepak-sai-vighnesh-panidam-91b35928a/',
+      linkedin: 'https://www.linkedin.com/in/deepak-sai-vighnesh/',
       leetcode: 'https://leetcode.com/u/deepaksaivighneshpanidam/'
     }
   },
