@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import { Analytics } from '@vercel/analytics/react';
 import TransitionOverlay from '@/components/ui/TransitionOverlay';
 import "./globals.css";
 
@@ -33,6 +34,7 @@ export default function RootLayout({
       <body className="flex flex-col min-h-screen">
         <TransitionOverlay />
         {children}
+        <Analytics />
       </body>
     </html>
   );

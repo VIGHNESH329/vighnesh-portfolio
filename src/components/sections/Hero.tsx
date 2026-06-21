@@ -4,7 +4,7 @@ import { cyberContent, sdeContent } from '@/data/content';
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform, useMotionTemplate } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import LiveFeed from './LiveFeed';
-import { Terminal, Code2 } from 'lucide-react';
+import { Terminal, Code2, Download } from 'lucide-react';
 
 const GithubIcon = () => (
   <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -125,32 +125,19 @@ export default function Hero() {
               style={{ rotateX, rotateY: rotateY as any }}
               className="w-full max-w-sm aspect-[3/4] rounded-3xl border border-white/10 bg-black/40 backdrop-blur-xl p-8 flex flex-col justify-between shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden relative group"
             >
-              {/* Card Glitch/Hover Background */}
+              {/* Card Hover Background */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none mix-blend-overlay" />
               
-              <div className="flex justify-between items-start">
-                <div className="w-12 h-12 rounded-full border border-primary flex items-center justify-center font-bold text-primary animate-pulse">
-                  ID
-                </div>
-                <div className="text-right">
-                  <div className="text-[10px] text-muted uppercase tracking-widest mb-1">Clearance</div>
-                  <div className="text-primary font-bold uppercase tracking-widest text-sm border border-primary/30 px-2 py-1 rounded">
-                    {activeIdentity === 'cyber' ? 'Top Secret' : 'Admin'}
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex-1 flex items-center justify-center relative w-full h-full mt-4">
+              <div className="flex-1 flex flex-col items-center justify-center relative w-full h-full mt-2">
                 {/* Premium Glassmorphism Profile Frame */}
-                <div className="w-full max-w-[200px] aspect-[4/5] rounded-xl border border-white/20 bg-white/5 flex items-center justify-center relative overflow-hidden group-hover:border-primary transition-colors duration-500 shadow-[0_0_30px_rgba(var(--primary),0.1)] p-2">
-                   <img src="/images/profile.jpeg" alt="Profile" className="w-full h-full object-cover rounded-lg mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-700" />
-                   <div className="absolute inset-0 bg-primary/10 group-hover:opacity-0 transition-opacity duration-500 pointer-events-none" />
+                <div className="w-full max-w-[220px] aspect-[4/5] rounded-2xl border border-white/20 bg-white/5 flex items-center justify-center relative overflow-hidden group-hover:border-primary transition-colors duration-500 shadow-[0_0_30px_rgba(var(--primary),0.1)] p-2">
+                   <img src="/images/profile.jpeg" alt="Profile" className="w-full h-full object-cover rounded-xl transition-all duration-700" />
                 </div>
               </div>
 
-              <div className="border-t border-white/10 pt-6 mt-4 relative z-10">
-                <h3 className="font-heading font-black text-2xl uppercase tracking-wider">{content.personal.name}</h3>
-                <p className="text-muted text-xs tracking-widest uppercase mt-2">{content.identity}</p>
+              <div className="text-center pt-8 mt-4 relative z-10">
+                <h3 className="font-heading font-black text-2xl uppercase tracking-wider text-foreground">{content.personal.name}</h3>
+                <p className="text-primary font-bold text-sm tracking-widest uppercase mt-2">{content.identity}</p>
               </div>
             </motion.div>
           </AnimatePresence>

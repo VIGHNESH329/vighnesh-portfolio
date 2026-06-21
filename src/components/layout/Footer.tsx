@@ -83,11 +83,14 @@ export default function Footer() {
         
         <div className="flex flex-col sm:flex-row gap-8 items-center">
           <MagneticButton>
-            <button onClick={handleDownload} className="w-48 h-48 rounded-full bg-primary flex items-center justify-center text-black font-bold tracking-widest uppercase text-sm hover:scale-105 transition-transform relative overflow-hidden group shadow-[0_0_40px_var(--primary)]" style={{ cursor: 'none' }}>
-              <span className="relative z-10 text-center leading-loose">
-                Download <br/> Resume
-              </span>
-              <div className="absolute inset-0 bg-white/30 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" />
+            <button onClick={handleDownload} className="w-48 h-48 rounded-full bg-primary flex items-center justify-center hover:scale-105 transition-transform relative overflow-hidden group shadow-[0_0_40px_var(--primary)]" style={{ cursor: 'none' }}>
+              <div 
+                className="font-black tracking-widest text-lg text-white" 
+                style={{ position: 'relative', zIndex: 9999, color: 'white', opacity: 1, visibility: 'visible', display: 'block', textAlign: 'center' }}
+              >
+                DOWNLOAD<br/>RESUME
+              </div>
+              <div className="absolute inset-0 bg-black/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out z-10" />
             </button>
           </MagneticButton>
           

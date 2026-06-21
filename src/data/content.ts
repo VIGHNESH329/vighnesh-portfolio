@@ -23,11 +23,9 @@ export const cyberContent = {
     headline: 'DEEPAK SAI VIGHNESH',
     subheadline: 'CYBERSECURITY UNDERGRADUATE',
     rotatingTitles: [
-      'SOC Analyst',
-      'Penetration Tester',
-      'Threat Hunter',
-      'CTF Player',
-      'Security Research Enthusiast'
+      'Security Research Enthusiast',
+      'SOC Analyst Aspirant',
+      'Penetration Testing Enthusiast'
     ],
     tagline: 'Cybersecurity undergraduate (B.Tech, 2027) with hands-on experience in security monitoring, threat intelligence, digital forensics, and incident response.'
   },
@@ -116,7 +114,7 @@ export const cyberContent = {
 };
 
 export const sdeContent = {
-  identity: 'Software Development Engineer',
+  identity: 'Software Engineering Undergraduate',
   personal: {
     name: 'Panidam Deepak Sai Vighnesh',
     email: 'deepaksaivighneshpanidam@gmail.com',
@@ -131,10 +129,9 @@ export const sdeContent = {
     headline: 'DEEPAK SAI VIGHNESH',
     subheadline: 'SOFTWARE ENGINEER',
     rotatingTitles: [
-      'Backend Developer',
+      'Developer',
       'Problem Solver',
-      'System Builder',
-      'Full Stack Learner'
+      'System Builder'
     ],
     tagline: 'Passionate about software development, problem-solving, and building scalable applications through hands-on projects, hackathons, and technical initiatives.'
   },
